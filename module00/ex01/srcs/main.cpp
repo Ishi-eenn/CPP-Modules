@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 12:10:36 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/10 16:45:42 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/02/10 17:04:11 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,6 @@ void interactivePhoneBook(){
 }
 
 int main(int argc, char **argv){
-
-
-	std::string operation;
-	std::string input;
-
 	(void)argv;
 	if(1 < argc)
 		displayErrorAndExit("Error: Too many arguments", false);
