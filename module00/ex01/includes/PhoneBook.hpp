@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 12:11:13 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/11 13:02:41 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/02/11 13:19:57 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ class PhoneBook {
 		void printContactInfo(const Contact& contact) const;
 		void printHeader();
 		void printSearchListRow(const Contact& contact, const int) const;
+		void printSearchList();
+		void printContactAtIndex(int i);
 
 	public:
 		void initCurrentIndex();
-		void printSearchList();
-		void printContactAtIndex(int idx);
 		void search();
 		void add();
 };
