@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 12:10:25 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/10 16:48:40 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/02/11 13:04:52 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,52 @@ void PhoneBook::initCurrentIndex(){
 
 int PhoneBook::getCurrentIndex() {
 	return (this->currentIndex);
+}
+
+void PhoneBook::addContact(Contact contact) {
+	this->contacts[this->currentIndex] = contact;
+	this->currentIndex = (this->currentIndex + 1) % PhoneBook::MAX_CONTACT;
+}
+
+std::string PhoneBook::getUserInputAsString(std::string prompt){
+	std::string input;
+
+	while(1){
+		std::cout << prompt;
+		std::getline(std::cin, input);
+		if(std::cin.eof())
+			displayErrorAndExit("Error: End of input", true);
+		if(std::cin.fail())
+			displayErrorAndExit("Error: Input failure", true);
+		if(input.empty()){
+			std::cout << "Error: Empty input. Please enter again." << std::endl;
+			continue;
+		}
+		break;
+	}
+	return (input);
+}
+
+void PhoneBook::add(){
+	std::string input;
+	Contact newContact;
+
+	input = getUserInputAsString("First Name $> ");
+	newContact.setFirstName(input);
+
+	input = getUserInputAsString("Last Name $> ");
+	newContact.setLastName(input);
+
+	input = getUserInputAsString("Nickname $> ");
+	newContact.setNickname(input);
+
+	input = getUserInputAsString("Phone Number $> ");
+	newContact.setPhoneNumber(input);
+
+	input = getUserInputAsString("Darkest Secret $> ");
+	newContact.setDarkestSecret(input);
+
+	this->addContact(newContact);
 }
 
 void PhoneBook::printHeader(){
@@ -81,4 +127,28 @@ void PhoneBook::printContactAtIndex(const int i){
 	else if (this->contacts[i - 1].getFirstName().empty())
 		std::cerr << "Error: No contact information at that index" << std::endl;
 	else printContactInfo(this->contacts[i - 1]);
+}
+
+void PhoneBook::search(){
+	std::string input;
+
+	this->printSearchList();
+	if (this->contacts[0].getFirstName().empty()){
+		std::cerr << "Error: No contacts available" << std::endl;
+		return ;
+	}
+	std::cout << "SEARCH $> ";
+	std::getline(std::cin, input);
+	if(std::cin.eof())
+		displayErrorAndExit("Error: End of input", true);
+	if(std::cin.fail())
+		displayErrorAndExit("Error: Input failure", true);
+
+	for (int i = 1; i <= PhoneBook::MAX_CONTACT; i++){
+		if (input.compare(std::to_string(i)) == 0){
+			this->printContactAtIndex(i);
+			return ;
+		}
+	}
+	std::cout << "Error: Invalid index" << std::endl;
 }

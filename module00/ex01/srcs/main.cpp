@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 12:10:36 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/10 17:04:11 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/02/11 12:40:19 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string>
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
-#include "utils.h"
+#include "Utils.hpp"
 
 void interactivePhoneBook(){
 	PhoneBook book;
@@ -35,10 +35,10 @@ void interactivePhoneBook(){
 		if (input.compare("EXIT") == 0)
 			displayAndExit("Exiting the program. Goodbye!");
 
-		if (input == "ADD")
-			std::cout << "ADD handler" << std::endl;
-		else if (input == "SEARCH")
-			std::cout << "SEARCH handler" << std::endl;
+		if (input.compare("ADD") == 0)
+			book.add();
+		else if (input.compare("SEARCH") == 0)
+			book.search();
 		else
 			input.empty() ? (std::cerr << "Error: Empty input" << std::endl) : (std::cerr << "Error: Invalid command" << std::endl);
 	}
@@ -50,3 +50,4 @@ int main(int argc, char **argv){
 		displayErrorAndExit("Error: Too many arguments", false);
 	interactivePhoneBook();
 }
+

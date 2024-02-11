@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 12:11:13 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/10 16:48:45 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/02/11 13:02:41 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string>
 #include <iomanip>
 #include "Contact.hpp"
+#include "Utils.hpp"
 
 class PhoneBook {
 	private:
@@ -26,7 +27,9 @@ class PhoneBook {
 
 	private:
 		static std::string truncateAndAppendEllipsis(std::string str);
+		std::string getUserInputAsString(std::string prompt);
 		int getCurrentIndex();
+		void addContact(Contact contact);
 		void printContactInfo(const Contact& contact) const;
 		void printHeader();
 		void printSearchListRow(const Contact& contact, const int) const;
@@ -35,6 +38,8 @@ class PhoneBook {
 		void initCurrentIndex();
 		void printSearchList();
 		void printContactAtIndex(int idx);
+		void search();
+		void add();
 };
 
 #endif
