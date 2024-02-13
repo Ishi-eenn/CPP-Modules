@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 22:42:39 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/12 23:55:08 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/02/13 14:33:23 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void Sed::replaceStringInFile(std::string s1, std::string s2){
 	while ((pos = content.find(s1, pos)) != std::string::npos){
 		content.erase(pos, s1.length());
 		content.insert(pos, s2);
+		pos += s1.length();
 	}
 
 	ofs << content;
