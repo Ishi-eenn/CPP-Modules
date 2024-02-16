@@ -25,6 +25,10 @@ all: $(NAME) $(OBJS)
 %.o: %.cpp
 	$(CXX) $(FLAGS) $(INCLUDE) -c $< -o $@
 
+test: all
+	@ ./$(NAME) > test/myOutput
+	@ bash test/test.sh
+
 clean:
 	rm -rf $(OBJ_DIR)
 
