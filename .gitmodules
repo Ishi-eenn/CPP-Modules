@@ -1,0 +1,3 @@
+[submodule "module00"]
+	path = module00
+	url = https://github.com/Ishi-eenn/CPP-Module00.git
