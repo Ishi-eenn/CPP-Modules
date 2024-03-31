@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:36:03 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/31 12:03:05 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/31 12:16:01 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ Fixed &Fixed::operator=(const Fixed &src)
   return *this;
 }
 
-int		Fixed::getRawBits(void) const
+int Fixed::getRawBits(void) const
 {
   std::cout << "getRawBits member function called" << std::endl;
   return fixedPointValue;
 }
 
-void	Fixed::setRawBits(int const raw)
+void Fixed::setRawBits(int const raw)
 {
   std::cout << "setRawBits member function called" << std::endl;
   fixedPointValue = raw;
