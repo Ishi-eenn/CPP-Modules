@@ -7,7 +7,6 @@ RM			=	rm -rf
 SRC_DIR	=	srcs
 SRC			=	main.cpp \
 					Fixed.cpp
-
 SRCS		= $(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJ_DIR	= objs
