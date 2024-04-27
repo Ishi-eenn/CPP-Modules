@@ -1,6 +1,6 @@
 #!/bin/bash
 
-diff_result=$(diff test/myOutput test/answer)
+diff_result=$(diff diff/myOutput diff/answer)
 
 if [ -z "$diff_result" ]; then
   echo "$(tput setaf 2)Success$(tput sgr0)"
