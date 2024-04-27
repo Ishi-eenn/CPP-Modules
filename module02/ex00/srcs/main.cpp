@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:36:01 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/16 17:26:28 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/04/25 18:26:25 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 int main( void ){
 
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
+  Fixed a;
+  Fixed b( a );
+  Fixed c;
 
-	c = b;
+  c = b;
 
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
+  std::cout << a.getRawBits() << std::endl;
+  std::cout << b.getRawBits() << std::endl;
+  std::cout << c.getRawBits() << std::endl;
 
-	return 0;
+  return (0);
 }
