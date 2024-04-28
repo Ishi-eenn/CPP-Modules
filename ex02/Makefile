@@ -29,7 +29,7 @@ all		: $(NAME) $(OBJS)
 	$(CXX) $(FLAGS) $(INCLUDE) -c $< -o $@
 
 diff	: all
-	@ ./$(NAME) > diff/myOutput
+	@ ./$(NAME) 1> diff/myOutput 2> diff/myConstractor
 	@ bash diff/diff.sh
 
 clean	:

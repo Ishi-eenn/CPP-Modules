@@ -1,0 +1,11 @@
+Default constructor called
+Float constructor called
+Int constructor called
+Float constructor called
+Destructor called
+Destructor called
+Copy constructor called
+Copy assignment operator called
+Destructor called
+Destructor called
+Destructor called
