@@ -38,6 +38,7 @@ clean	:
 fclean: clean
 	$(RM) $(NAME)
 	$(RM) diff/myOutput
+	$(RM) diff/myConstractor
 
 re		: fclean all
 
