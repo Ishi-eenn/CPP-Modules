@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:56 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 12:29:32 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/01 01:43:06 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ WrongCat::~WrongCat()
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &copy) {
+  std::cerr << "WrongCat assignation operator called" << std::endl;
   if (this != &copy)
     this->type = copy.type;
-  std::cerr << "WrongCat assignation operator called" << std::endl;
   return *this;
 }
 
 void WrongCat::makeSound() const {
-  std::cout << "Meow Meow" << std::endl;
+  std::cout << "Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow" << std::endl;
 }

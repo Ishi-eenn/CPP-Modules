@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:54 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 12:27:04 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/01 01:42:16 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ WrongAnimal::~WrongAnimal()
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &copy) {
+  std::cerr << "WrongAnimal assignation operator called" << std::endl;
   if (this != &copy)
     this->type = copy.type;
-  std::cerr << "WrongAnimal assignation operator called" << std::endl;
   return *this;
 }
 

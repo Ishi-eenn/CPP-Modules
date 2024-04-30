@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:50 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 12:21:09 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/01 01:42:25 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ Cat::~Cat()
 }
 
 Cat &Cat::operator=(const Cat &copy) {
+  std::cerr << "Cat assignation operator called" << std::endl;
   if (this != &copy)
     this->type = copy.type;
-  std::cerr << "Cat assignation operator called" << std::endl;
   return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:51 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 12:23:03 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/01 01:42:22 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ Dog::~Dog()
 }
 
 Dog &Dog::operator=(const Dog &copy) {
+  std::cerr << "Dog assignation operator called" << std::endl;
   if (this != &copy)
     this->type = copy.type;
-  std::cerr << "Dog assignation operator called" << std::endl;
   return *this;
 }
 
