@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 23:39:37 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/28 23:58:42 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/04/30 23:32:31 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 ClapTrap::ClapTrap() : name("tsishika"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-  std::cout << "ClapTrap default constructor called" << std::endl;
+  std::cerr << "ClapTrap default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
-  std::cout << "ClapTrap name constructor called" << std::endl;
+  std::cerr << "ClapTrap name constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-  std::cout << "ClapTrap copy constructor called" << std::endl;
+  std::cerr << "ClapTrap copy constructor called" << std::endl;
   *this = copy;
 }
 
 ClapTrap::~ClapTrap()
 {
-  std::cout << "ClapTrap destructor called" << std::endl;
+  std::cerr << "ClapTrap destructor called" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
 {
-  std::cout << "ClapTrap assignation operator called" << std::endl;
+  std::cerr << "ClapTrap assignation operator called" << std::endl;
   if (this != &copy) {
     this->name = copy.name;
     this->hitPoints = copy.hitPoints;
@@ -50,6 +50,7 @@ void ClapTrap::attack(std::string const &target) {
   } else if (hitPoints == 0) {
     std::cout << "ClapTrap " << name << " cannot attack because it is already dead." << std::endl;
   } else {
+    energyPoints--;
     std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
   }
 }
