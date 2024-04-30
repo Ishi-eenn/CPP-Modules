@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 01:04:42 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 01:05:53 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/01 00:23:09 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ class FragTrap : public ClapTrap {
 
     FragTrap &operator=(const FragTrap &copy);
 
-    void attack(std::string const &target);
     void highFivesGuys(void);
 };
 
