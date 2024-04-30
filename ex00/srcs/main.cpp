@@ -6,40 +6,38 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 23:39:39 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 00:04:11 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/04/30 23:03:19 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 int main() {
-  // ClapTrap clapTrap("tsishika");
+  {
+    std::cout << "/**********\\" << std::endl;
+    std::cout << "*  case 1  *" << std::endl;
+    std::cout << "\\**********/" << std::endl;
 
-  // clapTrap.attack("enemy");
-  // clapTrap.takeDamage(5);
-  // clapTrap.beRepaired(5);
+    ClapTrap clap("tsishika");
 
-  ClapTrap human1("tsishika");
-  ClapTrap human2("yamada");
+    clap.attack("nop");
+    clap.takeDamage(5);
+    clap.beRepaired(5);
+    clap.takeDamage(10);
+    clap.attack("Anthony");
+    clap.takeDamage(10);
+    clap.beRepaired(10);
+  }
+  {
+    std::cout << "/**********\\" << std::endl;
+    std::cout << "*  case 2  *" << std::endl;
+    std::cout << "\\**********/" << std::endl;
 
-  human1.attack("yamada");
+    ClapTrap clap("tsishika");
 
-  human1.attack("yayamada");
-  human2.takeDamage(10);
-  human1.takeDamage(5);
-  human2.beRepaired(10);
-  human1.beRepaired(6);
-  human1.beRepaired(3);
-
-  ClapTrap human4(human1);
-  human4.beRepaired(2);
-  human4.beRepaired(3);
-  human1.beRepaired(1);
-
-std::cout << "====================" << std::endl;
-// ClapTrap human1("yamada");
-//   ClapTrap human2("yayamada");
-//   ClapTrap human3;
-
-  return 0;
+    for (int i = 0; i < 11; i++)
+      clap.attack("nop");
+    clap.beRepaired(10);
+    clap.takeDamage(1000);
+  }
 }

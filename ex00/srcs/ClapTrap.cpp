@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 23:39:37 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/28 23:58:42 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/04/30 22:34:55 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void ClapTrap::attack(std::string const &target) {
   } else if (hitPoints == 0) {
     std::cout << "ClapTrap " << name << " cannot attack because it is already dead." << std::endl;
   } else {
+    energyPoints--;
     std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
   }
 }
