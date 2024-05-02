@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 01:04:44 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/02 16:25:06 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:50:43 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ FragTrap::FragTrap() : ClapTrap() {
   hitPoints = 100;
   energyPoints = 100;
   attackDamage = 30;
+  maxHitPoints = 100;
 }
 
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
@@ -24,6 +25,7 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
   hitPoints = 100;
   energyPoints = 100;
   attackDamage = 30;
+  maxHitPoints = 100;
 }
 
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy) {

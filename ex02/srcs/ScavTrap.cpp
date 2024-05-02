@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 00:14:21 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/02 16:27:42 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:51:45 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ ScavTrap::ScavTrap() : ClapTrap() {
   hitPoints = 100;
   energyPoints = 50;
   attackDamage = 20;
+  maxHitPoints = 100;
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
@@ -24,6 +25,7 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
   hitPoints = 100;
   energyPoints = 50;
   attackDamage = 20;
+  maxHitPoints = 100;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy) {

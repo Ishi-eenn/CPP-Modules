@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 01:37:53 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 01:47:47 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:52:13 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap() {
   hitPoints = FragTrap::hitPoints;
   energyPoints = ScavTrap::energyPoints;
   attackDamage = FragTrap::attackDamage;
+  maxHitPoints = FragTrap::maxHitPoints;
 }
 
 DiamondTrap::DiamondTrap(const std::string &name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name) {
@@ -24,6 +25,7 @@ DiamondTrap::DiamondTrap(const std::string &name) : ClapTrap(name + "_clap_name"
   hitPoints = FragTrap::hitPoints;
   energyPoints = ScavTrap::energyPoints;
   attackDamage = FragTrap::attackDamage;
+  maxHitPoints = FragTrap::maxHitPoints;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ClapTrap(copy), ScavTrap(copy), FragTrap(copy) {

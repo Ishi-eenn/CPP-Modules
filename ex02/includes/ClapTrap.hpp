@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 00:26:54 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 00:51:36 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:48:47 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class ClapTrap {
     unsigned int hitPoints;
     unsigned int energyPoints;
     unsigned int attackDamage;
+    unsigned int maxHitPoints;
 
   public:
     ClapTrap();
