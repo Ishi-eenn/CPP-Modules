@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:54 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/01 01:42:16 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/03 00:00:45 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ WrongAnimal::WrongAnimal(const std::string &type) : type(type)
   std::cerr << "WrongAnimal type constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &copy)
+WrongAnimal::WrongAnimal(const WrongAnimal &copy) : type(copy.type)
 {
   std::cerr << "WrongAnimal copy constructor called" << std::endl;
   *this = copy;

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:50 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/01 01:42:25 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/02 23:59:48 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Cat::Cat() : Animal("Cat")
   std::cerr << "Cat default constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat &copy)
+Cat::Cat(const Cat &copy) : Animal(copy)
 {
   std::cerr << "Cat copy constructor called" << std::endl;
   *this = copy;

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:51 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/01 01:42:22 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/03 00:00:38 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Dog::Dog() : Animal("Dog")
   std::cerr << "Dog default constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog &copy)
+Dog::Dog(const Dog &copy) : Animal(copy)
 {
   std::cerr << "Dog copy constructor called" << std::endl;
   *this = copy;
