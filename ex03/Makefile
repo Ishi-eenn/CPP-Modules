@@ -7,6 +7,8 @@ RM				=	rm -rf
 SRC_DIR		=	srcs
 SRC				=	main.cpp \
 						ClapTrap.cpp \
+						DiamondTrap.cpp \
+						FragTrap.cpp \
 						ScavTrap.cpp
 
 SRCS			= $(addprefix $(SRC_DIR)/, $(SRC))

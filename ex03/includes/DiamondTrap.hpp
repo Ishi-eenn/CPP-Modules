@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 01:36:41 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 01:47:50 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/03 03:33:48 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 class DiamondTrap : public ScavTrap, public FragTrap {
   private:
     std::string name;
+
   public:
     DiamondTrap();
     DiamondTrap(const std::string &name);
