@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 00:14:21 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/30 23:55:05 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:27:42 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
   attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &copy) {
+ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy) {
   std::cerr << "ScavTrap copy constructor called" << std::endl;
   *this = copy;
 }

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 01:04:44 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/01 00:19:19 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:25:06 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
   attackDamage = 30;
 }
 
-FragTrap::FragTrap(const FragTrap &copy) {
+FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy) {
   std::cerr << "FragTrap copy constructor called" << std::endl;
   *this = copy;
 }
