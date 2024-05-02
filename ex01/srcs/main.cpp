@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:53 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/01 02:21:55 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/03 00:25:47 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,11 @@ int main()
   return 0;
 }
 
+#ifdef DEBUG
+
 __attribute__((destructor)) static void destructor()
 {
   system("leaks -q a.out");
 }
+
+#endif

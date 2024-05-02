@@ -6,6 +6,7 @@ RM				=	rm -rf
 
 SRC_DIR		=	srcs
 SRC				=	Animal.cpp \
+						Brain.cpp \
 						Cat.cpp \
 						Dog.cpp \
 						main.cpp \
@@ -16,6 +17,10 @@ SRCS			= $(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJ_DIR		= objs
 OBJS			= $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRCS))
+
+ifeq ($(MAKECMDGOALS), debug)
+	FLAGS += -DDEBUG
+endif
 
 $(NAME): $(OBJS)
 	$(CXX) $(FLAGS) $(INCLUDE) $(SRCS) -o $(NAME)
@@ -39,5 +44,7 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+debug: re
 
 .PHONY: all test clean fclean re

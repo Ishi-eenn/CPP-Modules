@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:48 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/01 01:42:31 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/03 00:08:56 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Animal::Animal(const std::string &type) : type(type)
   std::cerr << "Animal type constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal &copy)
+Animal::Animal(const Animal &copy) : type(copy.type)
 {
   std::cerr << "Animal copy constructor called" << std::endl;
   *this = copy;
