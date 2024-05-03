@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:29 by tsishika          #+#    #+#             */
-/*   Updated: 2024/04/29 12:22:30 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/04 00:10:10 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Dog : public Animal
     Dog &operator=(const Dog &copy);
     virtual ~Dog();
 
-    void makeSound() const;
+    virtual void makeSound() const;
 };
 
 #endif

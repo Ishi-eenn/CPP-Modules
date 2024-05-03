@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 12:08:25 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/03 00:58:08 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/04 00:48:53 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ class Cat : public Animal
     Cat &operator=(const Cat &copy);
     ~Cat();
 
-    void makeSound() const;
+    virtual void makeSound() const;
+
+    void setIdea(int index, std::string idea);
+    std::string getIdea(int index) const;
 };
 
 #endif

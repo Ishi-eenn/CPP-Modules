@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 01:57:52 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/03 00:13:49 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/04 00:47:19 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,12 @@ Brain &Brain::operator=(const Brain &copy) {
       ideas[i] = copy.ideas[i];
   }
   return *this;
+}
+
+void Brain::setIdea(int index, std::string idea) {
+  ideas[index] = idea;
+}
+
+std::string Brain::getIdea(int index) const {
+  return ideas[index];
 }

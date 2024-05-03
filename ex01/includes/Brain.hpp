@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 01:57:49 by tsishika          #+#    #+#             */
-/*   Updated: 2024/05/01 02:07:57 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/05/04 00:46:49 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ private:
     ~Brain();
 
     Brain &operator=(const Brain &copy);
+
+    void setIdea(int index, std::string idea);
+    std::string getIdea(int index) const;
 };
 
 #endif
