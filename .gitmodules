@@ -7,3 +7,6 @@
 [submodule "module02"]
 	path = module02
 	url = https://github.com/Ishi-eenn/CPP-Module02.git
+[submodule "module03"]
+	path = module03
+	url = https://github.com/Ishi-eenn/CPP-Module03.git
